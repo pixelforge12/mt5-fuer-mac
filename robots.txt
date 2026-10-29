@@ -10,4 +10,4 @@ Allow: /
 User-agent: PerplexityBot
 Allow: /
 
-Sitemap: https://DOMAIN.de/sitemap.xml
+Sitemap: https://mt5-fur-mac.de/sitemap.xml
