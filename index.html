@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MetaTrader 5 für Mac herunterladen – Installation & Funktionen 2026</title>
+  <meta name="description" content="MetaTrader 5 für Mac: native Installation, WebTrader-Alternative und Nutzung auf Apple Silicon – verständlich erklärt inkl. Risikohinweise.">
+  <link rel="canonical" href="https://DOMAIN.de/">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="MetaTrader 5 für Mac – Installation, Funktionen & Alternativen">
+  <meta property="og:description" content="MT5 für macOS: offizieller Installer, Apple Silicon Kompatibilität, WebTrader-Vergleich. Kein Anlagetipp.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Schema: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "MT5 Mac Guide",
+    "url": "https://DOMAIN.de/",
+    "description": "Unabhängiger Informationsguide zu MetaTrader 5 für macOS – Installation, Kompatibilität und Funktionsvergleich.",
+    "foundingDate": "2026"
+  }
+  </script>
+
+  <!-- Schema: WebPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "MetaTrader 5 für Mac: Installation, Funktionen und Alternativen im Überblick",
+    "url": "https://DOMAIN.de/",
+    "description": "MetaTrader 5 für Mac – offizieller Installer, Apple Silicon Unterstützung, WebTrader vs. Desktop Vergleich.",
+    "dateModified": "2026-08-12",
+    "inLanguage": "de-DE"
+  }
+  </script>
+
+  <!-- Schema: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Läuft MetaTrader 5 nativ auf dem Mac oder braucht es Wine?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "MetaTrader 5 nutzt auf dem Mac intern die Kompatibilitätsschicht Wine, die der offizielle Installer automatisch herunterlädt und konfiguriert. Eine manuelle Wine-Konfiguration ist nicht erforderlich."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Funktioniert MT5 auf Apple-Silicon-Macs (M1/M2/M3)?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja, MetaTrader 5 unterstützt laut MetaQuotes alle Apple-Prozessoren ab M1 aufwärts. Vor der Installation empfiehlt sich ein Blick auf die aktuellen Systemanforderungen auf MetaQuotes.com."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Ist MetaTrader 4 auch für macOS verfügbar?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja, MetaTrader 4 bietet einen offiziellen macOS-Installer, setzt jedoch mindestens macOS Big Sur (11) voraus, während MetaTrader 5 bereits ab Catalina (10.15.7) läuft."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Was ist der Unterschied zwischen der Mac-App und dem WebTrader?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Die Desktop-Version erfordert eine einmalige Installation über den offiziellen Installer, während der WebTrader browserbasiert und ohne Softwareinstallation läuft, jedoch einen durchgehenden Internetzugang voraussetzt."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- BLOCK 1: NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">
+        <svg width="28" height="28" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+          <rect width="32" height="32" rx="7" fill="#4F46E5"/>
+          <polyline points="4,24 10,16 16,20 22,10 28,14" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="28" cy="14" r="2.5" fill="#F97316"/>
+        </svg>
+        <span>MT5 Mac Guide</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#funktionen">Funktionen</a></li>
+        <li><a href="#installation">Installation</a></li>
+        <li><a href="#vergleich">Vergleich</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+      <a href="https://libertex.com/platforms/metatrader5#downloadmt5" class="btn btn-primary btn-sm" rel="noopener noreferrer" target="_blank">MT5 herunterladen</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- BLOCK 2: HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-blob"></div>
+    <div class="container hero-grid">
+      <div class="hero-left">
+        <span class="eyebrow">Zuletzt aktualisiert: August 2026</span>
+        <h1>MetaTrader 5 für Mac</h1>
+        <p class="hero-sub">Offizieller Installer für macOS – automatisierte Wine-Einrichtung, Apple Silicon Unterstützung, vollständiger Funktionsumfang.</p>
+
+        <div class="risk-box risk-yellow">
+          <svg class="risk-icon" viewBox="0 0 24 24" fill="none" stroke="#B45309" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          <p><strong>Risikohinweis:</strong> Der Handel mit gehebelten Finanzinstrumenten wie CFDs und Devisen ist mit einem erhöhten Verlustrisiko verbunden und nicht für jeden Anleger geeignet. Es besteht das Risiko, das eingesetzte Kapital vollständig zu verlieren. Dieser Artikel dient ausschließlich Informationszwecken und stellt keine Anlageberatung dar.</p>
+        </div>
+
+        <div class="hero-ctas">
+          <a href="https://libertex.com/platforms/metatrader5#downloadmt5" class="btn btn-primary" rel="noopener noreferrer" target="_blank">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            MT5 für Mac herunterladen
+          </a>
+          <a href="https://libertex.com/platforms/metatrader5" class="btn btn-outline" rel="noopener noreferrer" target="_blank">Mehr zur Plattform</a>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="rate-card">
+          <div class="rate-card-header">
+            <div class="rate-pair">
+              <div class="currency-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" width="20" height="20"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              </div>
+              <div>
+                <div class="rate-label">EUR / USD</div>
+                <div class="rate-sublabel">Devisenkurs · Live</div>
+              </div>
+              <div class="rate-badge">LIVE</div>
+            </div>
+            <div class="rate-value-row">
+              <span class="rate-value" id="eur-usd-rate">—</span>
+              <span class="rate-change" id="rate-change"></span>
+            </div>
+            <div class="rate-updated">Aktualisiert: <span id="rate-time">—</span></div>
+          </div>
+          <div class="rate-chart-area">
+            <canvas id="miniChart" width="280" height="70"></canvas>
+          </div>
+          <div class="rate-meta-row">
+            <div class="rate-meta-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#4F46E5" stroke-width="2" width="16" height="16"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+              <span>21 Zeitrahmen</span>
+            </div>
+            <div class="rate-meta-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#4F46E5" stroke-width="2" width="16" height="16"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              <span>0 € Download</span>
+            </div>
+            <div class="rate-meta-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#4F46E5" stroke-width="2" width="16" height="16"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M8 2v4m8-4v4M8 12h8M8 16h4"/></svg>
+              <span>M1–M3 Support</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOCK 3: TRUST BAR -->
+  <section class="trust-bar">
+    <div class="container">
+      <p class="trust-text">Informationen basierend auf offiziellen MetaQuotes-Angaben · Stand 2026</p>
+      <div class="trust-pills">
+        <div class="trust-pill">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#4F46E5" stroke-width="2" width="16" height="16"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Risikohinweis inklusive
+        </div>
+        <div class="trust-pill">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#4F46E5" stroke-width="2" width="16" height="16"><polyline points="20 6 9 17 4 12"/></svg>
+          Offizielle MetaQuotes-Quelle
+        </div>
+        <div class="trust-pill">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#4F46E5" stroke-width="2" width="16" height="16"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          macOS & Apple Silicon
+        </div>
+        <div class="trust-pill">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#4F46E5" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg>
+          WebTrader-Vergleich
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOCK 4: KEY STATS -->
+  <section class="stats-section" id="funktionen">
+    <div class="container">
+      <h2 class="section-title">MetaTrader 5 für Mac – auf einen Blick</h2>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#4F46E5" stroke-width="2" width="28" height="28"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/><line x1="2" y1="8" x2="22" y2="8"/><line x1="2" y1="13" x2="22" y2="13"/></svg>
+          </div>
+          <div class="stat-number">21</div>
+          <div class="stat-label">Zeitrahmen</div>
+          <div class="stat-desc">Für technische Analyse auf dem Mac</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#4F46E5" stroke-width="2" width="28" height="28"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div class="stat-number">4</div>
+          <div class="stat-label">Schritte</div>
+          <div class="stat-desc">Vollautomatische Installation</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#4F46E5" stroke-width="2" width="28" height="28"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>
+          </div>
+          <div class="stat-number">10.15</div>
+          <div class="stat-label">macOS min.</div>
+          <div class="stat-desc">Ab Catalina (10.15.7)</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#4F46E5" stroke-width="2" width="28" height="28"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg>
+          </div>
+          <div class="stat-number">Web</div>
+          <div class="stat-label">Trader</div>
+          <div class="stat-desc">Browser-Alternative ohne Installation</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOCK 5: WAS IST MT5 FÜR MAC? -->
+  <section class="content-section white-bg">
+    <div class="container two-col-grid">
+      <div class="col-text">
+        <h2>Was ist MetaTrader 5 für Mac?</h2>
+        <p>MetaTrader 5 für Mac ist eine von MetaQuotes Software bereitgestellte Handelsplattform über einen dedizierten macOS-Installer. Der Installer lädt automatisch die aktuelle Wine-Version herunter und installiert MetaTrader 5 innerhalb dieser Umgebung. Diese automatisierte Einrichtung unterscheidet sich von einer vollständig nativen macOS-Anwendung.</p>
+        <p>Neben der Desktop-Version stehen ergänzend der WebTrader sowie mobile Apps für iPhone, iPad und Android zur Verfügung.</p>
+
+        <h3>Funktionsvergleich Mac vs. Windows</h3>
+        <p>MetaTrader 5 bietet auf dem Mac denselben Funktionsumfang wie unter Windows: Markttiefe-Anzeige (DOM), drei Chart-Typen mit 21 Zeitrahmen sowie MetaEditor für Expert Advisors auf MQL5-Basis. Auf dem Mac läuft die Software innerhalb der Wine-Kompatibilitätsschicht — bei älteren Modellen können Start- und Ladezeiten abweichen.</p>
+      </div>
+      <div class="col-card">
+        <div class="feature-table-card">
+          <div class="feature-table-title">Funktionsumfang Mac = Windows</div>
+          <table class="feature-table">
+            <thead>
+              <tr><th>Funktion</th><th>Mac</th><th>Windows</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Markttiefe (DOM)</td><td class="check">&#10003;</td><td class="check">&#10003;</td></tr>
+              <tr><td>21 Zeitrahmen</td><td class="check">&#10003;</td><td class="check">&#10003;</td></tr>
+              <tr><td>Expert Advisors (MQL5)</td><td class="check">&#10003;</td><td class="check">&#10003;</td></tr>
+              <tr><td>MetaEditor (IDE)</td><td class="check">&#10003;</td><td class="check">&#10003;</td></tr>
+              <tr><td>Strategietester</td><td class="check">&#10003;</td><td class="check">&#10003;</td></tr>
+              <tr><td>Installationsweg</td><td class="note">Wine*</td><td class="note">Nativ</td></tr>
+            </tbody>
+          </table>
+          <p class="table-footnote">*Automatisch durch offiziellen Installer konfiguriert</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOCK 6: CTA #1 -->
+  <section class="cta-gradient">
+    <div class="container cta-inner">
+      <h2>MetaTrader 5 jetzt für Mac herunterladen</h2>
+      <p>Offiziell von MetaQuotes. Unterstützt Apple Silicon (M1/M2/M3). Kostenlos.</p>
+      <a href="https://libertex.com/platforms/metatrader5#downloadmt5" class="btn btn-white" rel="noopener noreferrer" target="_blank">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        MT5 für Mac herunterladen
+      </a>
+      <p class="cta-risk">Risikohinweis: Gehebelter Handel ist mit erhöhtem Verlustrisiko verbunden.</p>
+    </div>
+  </section>
+
+  <!-- BLOCK 7: MT5 VS MT4 -->
+  <section class="content-section gray-bg" id="vergleich">
+    <div class="container">
+      <h2>MT5 vs. MT4 auf dem Mac</h2>
+      <p class="section-intro">MetaTrader 4 und MetaTrader 5 verfügen beide über einen offiziellen macOS-Installer. Der zentrale Unterschied liegt in den Systemvoraussetzungen: MetaTrader 5 benötigt mindestens macOS Catalina (10.15.7), MetaTrader 4 mindestens macOS Big Sur (11). MT5 bietet zusätzlich 21 Zeitrahmen und weitere Anlageklassen.</p>
+      <div class="table-wrapper">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th>Plattform</th>
+              <th>Min. macOS-Version</th>
+              <th>Offizieller Installer</th>
+              <th>Zeitrahmen</th>
+              <th>WebTrader</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>MetaTrader 4</td>
+              <td>macOS Big Sur (11)</td>
+              <td>Ja (Wine automatisch)</td>
+              <td>Weniger als MT5</td>
+              <td>Verfügbar</td>
+            </tr>
+            <tr class="highlight-row">
+              <td><strong>MetaTrader 5</strong></td>
+              <td><strong>macOS Catalina (10.15.7)</strong></td>
+              <td><strong>Ja (Wine automatisch)</strong></td>
+              <td><strong>21</strong></td>
+              <td><strong>Verfügbar</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOCK 8: WEBTRADER VS DESKTOP -->
+  <section class="content-section white-bg">
+    <div class="container">
+      <h2>WebTrader vs. Desktop-Installation vs. Emulator</h2>
+      <p class="section-intro">MetaTrader 5 WebTrader läuft im Browser ohne Installation und unterstützt 30 Indikatoren, 24 grafische Objekte und alle Orderarten. Die Desktop-Installation funktioniert nach einmaligem Setup auch ohne permanente Verbindung im Chart-Bereich.</p>
+
+      <p>Für den Einstieg in den Devisenhandel über MetaTrader 5 bietet <a href="https://libertex.com/platforms/metatrader5" class="inline-link" rel="noopener noreferrer" target="_blank">die MT5-Plattformseite</a> einen Überblick über verfügbare Kontomodelle.</p>
+
+      <div class="table-wrapper">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th>Installationsweg</th>
+              <th>Software nötig</th>
+              <th>Dauerhafter Internetzugang</th>
+              <th>Aufwand</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>MetaTrader 5 WebTrader</td>
+              <td>Nein</td>
+              <td>Ja</td>
+              <td>Gering</td>
+            </tr>
+            <tr class="highlight-row">
+              <td><strong>Desktop (offizieller Installer)</strong></td>
+              <td><strong>Ja (Wine automatisch)</strong></td>
+              <td><strong>Nur für Kursdaten</strong></td>
+              <td><strong>Gering–mittel</strong></td>
+            </tr>
+            <tr>
+              <td>Emulator (z.&#8202;B. Parallels)</td>
+              <td>Ja + Lizenz</td>
+              <td>Nur für Kursdaten</td>
+              <td>Höher</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="two-cards-row">
+        <div class="info-card">
+          <div class="info-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#4F46E5" stroke-width="2" width="24" height="24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg>
+          </div>
+          <h3>Wann lohnt sich WebTrader?</h3>
+          <p>Für schnellen Marktzugriff ohne Installation, an fremden Geräten oder bei eingeschränkten Systemberechtigungen. Für komplexe Analysen und Expert Advisors ist die Desktop-Version vorzuziehen.</p>
+        </div>
+        <div class="info-card">
+          <div class="info-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#4F46E5" stroke-width="2" width="24" height="24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+          <h3>Wann ist ein Emulator relevant?</h3>
+          <p>Parallels bleibt relevant, wenn neben MT5 weitere Windows-Tools benötigt werden. Für MT5 selbst übernimmt der offizielle Installer die Wine-Einrichtung automatisch.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOCK 9: INSTALLATION -->
+  <section class="content-section gray-bg" id="installation">
+    <div class="container">
+      <h2>MetaTrader 5 auf dem Mac installieren</h2>
+      <p class="section-intro">Der offizielle MetaQuotes-Installer richtet MT5 für macOS in vier Schritten vollautomatisch ein – inklusive Wine-Konfiguration.</p>
+
+      <div class="steps-row">
+        <div class="step-item">
+          <div class="step-circle">1</div>
+          <div class="step-connector"></div>
+          <h4>.pkg herunterladen</h4>
+          <p>Von der offiziellen MetaQuotes-Website oder über den Broker-Link</p>
+        </div>
+        <div class="step-item">
+          <div class="step-circle">2</div>
+          <div class="step-connector"></div>
+          <h4>Installer starten</h4>
+          <p>Lädt automatisch Wine für die vorhandene Mac-Hardware herunter</p>
+        </div>
+        <div class="step-item">
+          <div class="step-circle">3</div>
+          <div class="step-connector"></div>
+          <h4>Wine bestätigen</h4>
+          <p>Komponenten Mono und Gecko bei Aufforderung bestätigen</p>
+        </div>
+        <div class="step-item">
+          <div class="step-circle">4</div>
+          <h4>Anmelden & starten</h4>
+          <p>MT5 startet automatisch – mit bestehendem Konto oder Demokonto</p>
+        </div>
+      </div>
+
+      <h3>MT5 auf Apple Silicon</h3>
+      <div class="table-wrapper compact-table-wrap">
+        <table class="compare-table">
+          <thead>
+            <tr><th>Prüfpunkt</th><th>Anforderung (MetaQuotes)</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Minimale macOS-Version</td><td>Catalina (10.15.7)</td></tr>
+            <tr><td>Unterstützte Chips</td><td>Alle Apple-Prozessoren ab M1</td></tr>
+            <tr><td>Manuelle Rosetta-Konfiguration</td><td>In der Regel nicht erforderlich</td></tr>
+            <tr><td>Aktualität der Angaben</td><td>Vor Installation auf MetaQuotes.com prüfen</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOCK 10: CTA #2 -->
+  <section class="cta-card-section white-bg">
+    <div class="container">
+      <div class="cta-border-card">
+        <p>Bereit für den ersten Schritt? Laden Sie MT5 offiziell für Ihren Mac herunter und testen Sie die Plattform zunächst mit einem kostenlosen Demokonto.</p>
+        <a href="https://libertex.com/platforms/metatrader5#downloadmt5" class="btn btn-primary" rel="noopener noreferrer" target="_blank">MT5 für Mac herunterladen</a>
+        <p class="cta-risk-inline">Risikohinweis: Gehebelter Handel birgt erhöhte Verlustrisiken.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOCK 11: HANDELSKONTO & BROKER -->
+  <section class="content-section gray-bg">
+    <div class="container">
+      <h2>Handelskonto und Broker-Voraussetzungen</h2>
+      <p class="section-intro">Für den Handel mit MT5 auf dem Mac ist ein Handelskonto bei einem regulierten MT5-Broker erforderlich. Zur Wahl stehen ein Demokonto ohne echtes Kapital sowie ein Live-Konto.</p>
+      <div class="two-cards-row">
+        <div class="account-card">
+          <div class="account-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#4F46E5" stroke-width="2" width="28" height="28"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          </div>
+          <h3>Demokonto</h3>
+          <ul class="account-list">
+            <li>Kein echtes Kapital erforderlich</li>
+            <li>Zum Testen von Installation und Funktionen</li>
+            <li>Alle MT5-Funktionen verfügbar</li>
+          </ul>
+        </div>
+        <div class="account-card">
+          <div class="account-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#F97316" stroke-width="2" width="28" height="28"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+          </div>
+          <h3>Live-Konto</h3>
+          <ul class="account-list">
+            <li>Echtes Kapital erforderlich</li>
+            <li>Kosten brokerabhängig (Spreads, Kommissionen, Swap)</li>
+            <li>Nur bei regulierten Brokern eröffnen</li>
+          </ul>
+        </div>
+      </div>
+      <div class="risk-box risk-orange">
+        <svg class="risk-icon" viewBox="0 0 24 24" fill="none" stroke="#92400E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        <p><strong>Risikohinweis:</strong> Der Handel mit Hebelprodukten über ein MT5-Handelskonto ist mit einem erhöhten Risiko verbunden. Vor der Kontoeröffnung sollten Nutzer prüfen, ob der jeweilige Broker reguliert ist, und sich der Möglichkeit eines vollständigen Kapitalverlusts bewusst sein.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOCK 12: WÄHRUNGSRECHNER -->
+  <section class="content-section white-bg">
+    <div class="container converter-section">
+      <h2>Währungsrechner</h2>
+      <p class="section-intro">Live-Devisenkurse über die Frankfurter API – für deutsche Trader.</p>
+      <div class="converter-card">
+        <div class="converter-row">
+          <div class="conv-group">
+            <label for="conv-amount">Betrag</label>
+            <input type="number" id="conv-amount" value="1000" min="0" step="any">
+          </div>
+          <div class="conv-group">
+            <label for="conv-from">Von</label>
+            <select id="conv-from">
+              <option value="EUR" selected>EUR</option>
+              <option value="USD">USD</option>
+              <option value="GBP">GBP</option>
+              <option value="CHF">CHF</option>
+              <option value="JPY">JPY</option>
+              <option value="AUD">AUD</option>
+              <option value="CAD">CAD</option>
+              <option value="SEK">SEK</option>
+              <option value="NOK">NOK</option>
+              <option value="DKK">DKK</option>
+            </select>
+          </div>
+          <div class="conv-arrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#4F46E5" stroke-width="2" width="24" height="24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </div>
+          <div class="conv-group">
+            <label for="conv-result">Ergebnis</label>
+            <input type="text" id="conv-result" readonly placeholder="—">
+          </div>
+          <div class="conv-group">
+            <label for="conv-to">Nach</label>
+            <select id="conv-to">
+              <option value="EUR">EUR</option>
+              <option value="USD" selected>USD</option>
+              <option value="GBP">GBP</option>
+              <option value="CHF">CHF</option>
+              <option value="JPY">JPY</option>
+              <option value="AUD">AUD</option>
+              <option value="CAD">CAD</option>
+              <option value="SEK">SEK</option>
+              <option value="NOK">NOK</option>
+              <option value="DKK">DKK</option>
+            </select>
+          </div>
+        </div>
+        <button class="btn btn-primary converter-btn" onclick="convertCurrency()">Umrechnen</button>
+        <div class="conv-rate-info" id="conv-rate">Kurs wird geladen…</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOCK 13: EXPERT ADVISORS -->
+  <section class="content-section gray-bg">
+    <div class="container">
+      <h2>Automatisierter Handel auf dem Mac</h2>
+      <p class="section-intro">Expert Advisors (EAs) basieren auf MQL5 und werden im MetaEditor erstellt. Der Strategietester ermöglicht Backtests anhand historischer Daten.</p>
+
+      <div class="ea-cards">
+        <div class="ea-card">
+          <div class="ea-num">01</div>
+          <h4>Strategie entwickeln</h4>
+          <p>MQL5 + MetaEditor – integrierte Entwicklungsumgebung direkt in MT5</p>
+        </div>
+        <div class="ea-card">
+          <div class="ea-num">02</div>
+          <h4>Strategietester</h4>
+          <p>Backtest anhand historischer Daten – kein Erfolgsversprechen für die Zukunft</p>
+        </div>
+        <div class="ea-card">
+          <div class="ea-num">03</div>
+          <h4>Live-Einsatz</h4>
+          <p>Zuerst Demokonto. Automatisierung ersetzt keine Marktbeobachtung</p>
+        </div>
+      </div>
+
+      <div class="risk-box risk-yellow">
+        <svg class="risk-icon" viewBox="0 0 24 24" fill="none" stroke="#B45309" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        <p><strong>Risikohinweis:</strong> Backtests und historische Daten liefern keine Garantie für zukünftige Handelsergebnisse. Auch automatisierte Strategien können zu Verlusten führen, die das eingesetzte Kapital übersteigen können.</p>
+      </div>
+
+      <h3>Für wen eignet sich MT5 auf dem Mac?</h3>
+      <div class="two-cards-row">
+        <div class="info-card">
+          <div class="info-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#4F46E5" stroke-width="2" width="24" height="24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          </div>
+          <h3>Einsteiger</h3>
+          <p>Demokonto zum Kennenlernen der Oberfläche, Chart-Funktionen und Orderarten – ohne echtes Kapital einzusetzen.</p>
+        </div>
+        <div class="info-card">
+          <div class="info-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#4F46E5" stroke-width="2" width="24" height="24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+          </div>
+          <h3>Erfahrene Trader</h3>
+          <p>Markttiefe, 21 Zeitrahmen, MQL5 Expert Advisors und Strategietester – voller Funktionsumfang wie unter Windows.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOCK 14: CTA #3 -->
+  <section class="cta-warm">
+    <div class="container cta-inner">
+      <h2>MT5 für Mac – jetzt kostenlos testen</h2>
+      <p>Demokonto verfügbar. Kein echtes Kapital erforderlich zum Starten.</p>
+      <a href="https://libertex.com/platforms/metatrader5#downloadmt5" class="btn btn-white" rel="noopener noreferrer" target="_blank">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Jetzt MT5 herunterladen
+      </a>
+      <p class="cta-risk">Der Handel mit Hebelprodukten ist mit einem erhöhten Verlustrisiko verbunden.</p>
+    </div>
+  </section>
+
+  <!-- BLOCK 15: HÄUFIGE PROBLEME -->
+  <section class="content-section gray-bg">
+    <div class="container">
+      <h2>Häufige Probleme und Lösungsansätze</h2>
+      <p class="section-intro">Startprobleme lassen sich häufig auf eine veraltete macOS-Version oder unvollständig installierte Wine-Komponenten zurückführen.</p>
+      <div class="problems-grid">
+        <div class="problem-card">
+          <div class="problem-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#4F46E5" stroke-width="2" width="22" height="22"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          </div>
+          <div>
+            <h4>macOS-Version prüfen</h4>
+            <p>Mindestens Catalina (10.15.7) erforderlich</p>
+          </div>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#4F46E5" stroke-width="2" width="22" height="22"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/></svg>
+          </div>
+          <div>
+            <h4>Apple Silicon prüfen</h4>
+            <p>M1 oder neuer – alle Chips werden unterstützt</p>
+          </div>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#4F46E5" stroke-width="2" width="22" height="22"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+          </div>
+          <div>
+            <h4>Wine-Komponenten</h4>
+            <p>Mono und Gecko vollständig installiert?</p>
+          </div>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#4F46E5" stroke-width="2" width="22" height="22"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          </div>
+          <div>
+            <h4>Installer aktualisieren</h4>
+            <p>Aktuellen Installer neu von MetaQuotes herunterladen</p>
+          </div>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#4F46E5" stroke-width="2" width="22" height="22"><path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z"/></svg>
+          </div>
+          <div>
+            <h4>Speicherort prüfen</h4>
+            <p><code>~/Library/Application Support/net.metaquotes.wine.metatrader5/</code></p>
+          </div>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#4F46E5" stroke-width="2" width="22" height="22"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg>
+          </div>
+          <div>
+            <h4>Alternative: WebTrader</h4>
+            <p>Browserbasierte Version als Übergangslösung</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOCK 16: FAQ -->
+  <section class="content-section white-bg" id="faq">
+    <div class="container faq-container">
+      <h2>Häufig gestellte Fragen</h2>
+      <div class="accordion">
+        <div class="accordion-item">
+          <button class="accordion-btn" aria-expanded="false">
+            Läuft MetaTrader 5 nativ auf dem Mac oder braucht es Wine?
+            <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="accordion-body">
+            <p>MetaTrader 5 nutzt auf dem Mac laut MetaQuotes intern die Kompatibilitätsschicht Wine, die der offizielle Installer automatisch herunterlädt und konfiguriert. Eine manuelle Wine-Konfiguration durch den Nutzer ist dabei nicht erforderlich.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-btn" aria-expanded="false">
+            Funktioniert MT5 auf Apple-Silicon-Macs (M1/M2/M3)?
+            <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="accordion-body">
+            <p>Ja, MetaTrader 5 unterstützt laut MetaQuotes alle Apple-Prozessoren ab M1 aufwärts. Vor der Installation empfiehlt sich dennoch ein Blick auf die aktuellen Systemanforderungen auf MetaQuotes.com.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-btn" aria-expanded="false">
+            Ist MetaTrader 4 auch für macOS verfügbar?
+            <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="accordion-body">
+            <p>Ja, auch MetaTrader 4 bietet laut MetaQuotes einen offiziellen, automatisierten macOS-Installer. Er setzt jedoch mindestens macOS Big Sur (11) voraus, während MetaTrader 5 bereits ab Catalina (10.15.7) läuft.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-btn" aria-expanded="false">
+            Was ist der Unterschied zwischen der Mac-App und dem WebTrader?
+            <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="accordion-body">
+            <p>Die MetaTrader-5-Desktop-Version für den Mac erfordert eine einmalige Installation über den offiziellen Installer, während der WebTrader browserbasiert und ohne Softwareinstallation läuft, jedoch einen durchgehenden Internetzugang voraussetzt.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOCK 17: CTA #4 -->
+  <section class="content-section gray-bg">
+    <div class="container">
+      <div class="cta-big-card">
+        <h2>Bereit, MetaTrader 5 auf Ihrem Mac zu testen?</h2>
+        <p>Laden Sie MT5 für macOS herunter und erkunden Sie die Plattform mit einem kostenlosen Demokonto – ohne echtes Kapital einzusetzen.</p>
+        <a href="https://libertex.com/platforms/metatrader5#downloadmt5" class="btn btn-primary" rel="noopener noreferrer" target="_blank">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          MT5 für Mac kostenlos herunterladen
+        </a>
+        <p class="cta-risk-inline">Risikohinweis: Gehebelter Handel ist mit erhöhtem Verlustrisiko verbunden.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOCK 18: FAZIT -->
+  <section class="content-section gray-bg">
+    <div class="container fazit-section">
+      <h2>Fazit</h2>
+      <div class="fazit-text">
+        <p>MetaTrader 5 steht Mac-Nutzern über einen offiziellen, automatisierten Installer von MetaQuotes zur Verfügung, der die Einrichtung der benötigten Wine-Umgebung übernimmt, ohne dass eine vollständig native macOS-Anwendung vorliegt. Gegenüber MetaTrader 4 profitiert MT5 auf dem Mac von einer niedrigeren Mindestanforderung (Catalina 10.15.7 statt Big Sur 11) und einem größeren Funktionsumfang.</p>
+        <p>Wer keine lokale Installation wünscht, kann auf die browserbasierte WebTrader-Version ausweichen. Vor der Kontoeröffnung sollten die aktuellen Systemanforderungen von MetaQuotes geprüft und die Lizenzierung des gewählten Brokers verifiziert werden. Ein Demokonto bietet einen Einstiegspunkt zum Testen von Installation und Funktionsumfang ohne echtes Kapital.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOCK 19: CTA #5 (FINAL) -->
+  <section class="cta-indigo-final">
+    <div class="container cta-inner">
+      <h2>MetaTrader 5 für Mac – offiziell und kostenlos</h2>
+      <p>Der offizielle MetaQuotes-Installer richtet MT5 für macOS automatisch ein. Systemanforderungen vor der Installation prüfen.</p>
+      <a href="https://libertex.com/platforms/metatrader5#downloadmt5" class="btn btn-white" rel="noopener noreferrer" target="_blank">MT5 herunterladen</a>
+      <p class="cta-risk">Risikohinweis: Gehebelter Handel ist mit erhöhtem Verlustrisiko verbunden.</p>
+    </div>
+  </section>
+
+  <!-- BLOCK 20: FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <svg width="24" height="24" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+          <rect width="32" height="32" rx="7" fill="#4F46E5"/>
+          <polyline points="4,24 10,16 16,20 22,10 28,14" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="28" cy="14" r="2.5" fill="#F97316"/>
+        </svg>
+        <span>MT5 Mac Guide · 2026</span>
+      </div>
+      <p class="footer-disclaimer">Dieser Inhalt dient ausschließlich Informationszwecken und stellt keine Anlageberatung, Empfehlung oder Aufforderung zum Kauf oder Verkauf von Finanzinstrumenten dar. Der Handel mit gehebelten Produkten ist mit einem erheblichen Verlustrisiko verbunden. Informieren Sie sich vor jeder Entscheidung eigenständig und ziehen Sie bei Bedarf unabhängigen fachlichen Rat hinzu.</p>
+      <div class="footer-links">
+        <a href="/impressum">Impressum</a>
+        <a href="/datenschutz">Datenschutz</a>
+        <a href="/sitemap.xml">Sitemap</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

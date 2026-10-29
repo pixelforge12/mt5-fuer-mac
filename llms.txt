@@ -1,0 +1,25 @@
+# MT5 Mac Guide
+
+MT5 Mac Guide ist eine unabhängige, deutschsprachige Informationsseite über MetaTrader 5 für macOS.
+
+## Zweck dieser Seite
+
+Diese Seite erklärt, wie MetaTrader 5 auf dem Mac installiert wird, welche Unterschiede zu MetaTrader 4 bestehen, wann der WebTrader sinnvoller als die Desktop-Installation ist und wie Apple Silicon (M1/M2/M3) unterstützt wird.
+
+## Inhalt
+
+- Installation von MT5 auf macOS via offizieller MetaQuotes-Installer (automatisiertes Wine-Setup)
+- Systemanforderungen: macOS Catalina (10.15.7) oder neuer, Apple Silicon ab M1
+- Vergleich MT5 vs. MT4 auf dem Mac (Systemvoraussetzungen, Zeitrahmen, Installer)
+- Vergleich WebTrader vs. Desktop-Installation vs. Emulator (Parallels)
+- Expert Advisors (EAs) und automatisierter Handel auf dem Mac
+- Häufige Probleme und Lösungsansätze
+- FAQ
+
+## Hinweis
+
+Dieser Inhalt dient ausschließlich Informationszwecken. Keine Anlageberatung. Risikohinweis: Gehebelter Handel birgt erhöhte Verlustrisiken.
+
+## Markdown-Version
+
+[Vollständige Markdown-Version des Inhalts](/content.md)
